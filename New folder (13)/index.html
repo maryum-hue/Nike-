@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nike</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 10px;
+      background: #8b858570;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    li a {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+  transition: width 0.3s ease;
+}
+
+li a:hover {
+  color: red;
+}
+
+li a:hover::after {
+  width: 100%;
+}
+
+.custom-btn1,
+.custom-btn2 {
+  padding: 10px 20px;
+  margin: 10px 10px 0 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-btn1 {
+  background-color: rgb(238, 0, 0);
+  color: white;
+}
+
+.custom-btn1:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+}
+
+.custom-btn2 {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.custom-btn2:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.05);
+}
+
+    @media (max-width: 768px) {
+      ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #000;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+      }
+
+      ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+/* MAIN - DESKTOP DEFAULT */
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 40px 60px;
+}
+
+.txt {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.lg-txt {
+    font-size: 90px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.sm-txt {
+    font-size: 17px;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.custom-btn1,
+.custom-btn2 {
+    padding: 10px 20px;
+    margin: 10px 10px 0 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.custom-btn1 {
+    background-color: rgb(238, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.custom-btn2 {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+}
+
+.shoe-img {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.shoe-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* MAIN - RESPONSIVE */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .lg-txt {
+        font-size: 48px;
+    }
+
+    .sm-txt {
+        font-size: 16px;
+    }
+
+    .custom-btn1,
+    .custom-btn2 {
+        margin: 10px 5px;
+        font-size: 15px;
+    }
+
+    .shoe-img {
+        margin-top: 30px;
+    }
+}
+.icons{
+  margin-top: 25px;
+  margin-left: 5px;
+  gap: 20px;
+  display: flex;
+}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="brand_logo.png" alt="Nike Logo" />
+    </div>
+    <ul >
+      <li><a href="#">Menu</a></li>
+      <li><a href="#">Location</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <button class="custom-btn1">Login</button>
+  </nav>
+<div class="main">
+    <div class="txt">
+        <h1 class="lg-txt">Your Feet <br>
+             Deserves  <br>
+             The Best</h1>
+        <p class="sm-txt">Lorem ipsum dolor, sit amet consectetur <br>
+            adipisicing elit. Consequatur commodi a <br>
+            quod fugit eius nisi accusamus pariatur. Lorem ipsum <br>
+            dolor sit amet.</p>
+            <button class="custom-btn1">Shop Now</button>
+            <button class="custom-btn2">Category</button> <br>
+            <br>
+            <p>Also Available On</p>
+            <div class="icons"> <img src="flipkart.png" alt="">
+            <img src="amazon.png" alt=""></div>
+           
+    </div>
+    <div class="shoe-img">
+        <img src="shoe_image.png" alt="">
+    </div>
+</div>
+
+</body>
+</html>
